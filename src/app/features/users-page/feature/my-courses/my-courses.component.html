@@ -1,0 +1,31 @@
+<div class="p-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div
+      *ngFor="let course of courses"
+      class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow"
+    >
+      <img [src]="course.coverImageUrl" [alt]="course.courseName" class="w-full h-40 object-cover" />
+  
+      <div class="p-4">
+        <h2 class="text-xl font-semibold text-gray-800">{{ course.courseName }}</h2>
+        <p class="text-sm text-gray-600">{{ course.courseDescription }}</p>
+  
+        <div class="mt-2 text-sm text-gray-500 flex flex-wrap gap-2">
+          <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs">
+            {{ course.courseCategory }}
+          </span>
+          <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs">
+            {{ course.courseLevel }}
+          </span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs">
+            {{ course.durationHours }} hrs
+          </span>
+        </div>
+  
+        <div class="mt-4 flex justify-between text-xs text-gray-400">
+          <span>Code: {{ course.courseCode }}</span>
+          <span>Final Exam: {{ course.hasFinalExam ? 'Yes' : 'No' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

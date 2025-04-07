@@ -1,0 +1,46 @@
+<div class="flex flex-row min-h-screen w-full bg-[#f6f1ee] text-gray-900">
+  <!-- Left Sidebar -->
+  <aside
+    class="transition-all duration-500 ease-in-out border-r bg-white"
+    [ngClass]="{ 'w-64': leftSidebarOpen, 'w-16': !leftSidebarOpen }"
+  >
+    <app-sidebar [isSidebarOpen]="leftSidebarOpen"></app-sidebar>
+  </aside>
+
+  <!-- Main Content Area -->
+<div class="flex flex-col flex-1 min-w-0">
+  <header class="bg-white border-b flex items-center gap-4 p-4">
+    <!-- Make app-header fill available space -->
+    <div class="flex-1">
+      <app-header></app-header>
+    </div>
+
+    <!-- Buttons stay small with spacing -->
+    <div class="flex gap-2 flex-shrink-0">
+      <button
+        class="text-sm px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
+        (click)="toggleLeftSidebar()"
+      >
+        {{ leftSidebarOpen ? 'Hide' : 'Show' }} Menu
+      </button>
+      <button
+        class="text-sm px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
+        (click)="toggleRightSidebar()"
+      >
+        {{ rightSidebarOpen ? 'Hide' : 'Show' }} Progress
+      </button>
+    </div>
+  </header>
+
+  <section class="flex-1 p-6 overflow-x-hidden overflow-y-auto">
+    <router-outlet></router-outlet>
+  </section>
+</div>
+
+
+  <!-- Right Sidebar -->
+  <app-course-progress
+    *ngIf="rightSidebarOpen"
+    [courses]="courses"
+  ></app-course-progress>
+</div>
