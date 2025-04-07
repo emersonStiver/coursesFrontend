@@ -1,27 +1,59 @@
-# UnisalleForm
+# 🎓 Plataforma de Cursos - U La Salle (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+Esta aplicación es una plataforma educativa construida con *Angular, donde los usuarios pueden visualizar, gestionar y explorar cursos disponibles. Fue creada como parte de una actividad educativa sobre control de versiones y colaboración en equipo con **Git* y *GitHub*.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🌐 Descripción General
 
-## Code scaffolding
+La aplicación permite a los estudiantes:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Ver sus cursos asignados.
+- Acceder a la configuración de su cuenta.
+- Marcar cursos como favoritos (Wishlist).
+- Explorar una página principal con contenido destacado.
+- Cerrar sesión de manera segura.
 
-## Build
+Está desarrollada en Angular, utilizando *componentes modulares* para facilitar su mantenimiento y escalabilidad, además de tener una estructura clara orientada a futuras expansiones.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🧩 Componentes Principales
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Componente         | Función                                                                 |
+|--------------------|-------------------------------------------------------------------------|
+| HomeComponent     | Página de inicio con presentación de la plataforma y cursos destacados. |
+| MyCoursesComponent| Lista de cursos asignados al usuario (mockeados localmente).            |
+| SettingsComponent | Página para editar nombre, apellido, teléfono, email y contraseña.      |
+| WishlistComponent | Vista de cursos marcados como favoritos.                                |
+| LogoutComponent   | Componente para cerrar sesión y redirigir al inicio.                    |
+| HeaderComponent   | Barra de navegación superior.                                           |
+| FooterComponent   | Pie de página con enlaces e información adicional.                      |
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🖼 Diseño y UX
 
-## Further help
+- Interfaz responsiva adaptada para escritorio y móvil.
+- Estética moderna con estilos personalizados (o TailwindCSS si se integró).
+- Navegación fluida entre secciones.
+- Uso de iconos, imágenes aleatorias en los cursos, y UX intuitivo.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 🚀 Tecnologías Utilizadas
+
+- [Angular 16+](https://angular.io/)
+- TypeScript
+- HTML5 / CSS3
+- RxJS para flujos reactivos
+- Git & GitHub
+- Visual Studio Code
+
+---
+
+## 🔧 Instalación y Ejecución Local
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/mi-plataforma-cursos.git
